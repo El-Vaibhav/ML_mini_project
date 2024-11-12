@@ -121,17 +121,16 @@ X_scaled = scaler.fit_transform(X)
 # Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
 
-# Load and preprocess training data
-X_train, y_train, encoder = preprocess_data("C:\\Users\\tabis\\OneDrive\\Desktop\\Datasets\\KDDTrain+.txt", fit_encoder=True)
+# # Load and preprocess training data
+# X_train, y_train, encoder = preprocess_data("C:\\Users\\HP\\OneDrive\\Desktop\\BTP_5thsem\\BTP\\KDDTrain+_20Percent.txt", fit_encoder=True)
 
-# Load and preprocess test data using the same encoder
-X_test, y_test, _ = preprocess_data("C:\\Users\\tabis\\OneDrive\\Desktop\\Datasets\\KDDTest+.txt", encoder=encoder)
+# # Load and preprocess test data using the same encoder
+# X_test, y_test, _ = preprocess_data("C:\\Users\\HP\\OneDrive\\Desktop\\BTP_5thsem\\BTP\\KDDTrain+_20Percent.txt", encoder=encoder)
 
 # Normalize the data using MinMaxScaler (scaling each feature to a range [0, 1])
 scaler = MinMaxScaler()
 X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
-
 
 # Dimensionality Reduction with PCA
 pca = PCA(n_components=0.95)  # Retain 95% of variance
@@ -145,7 +144,6 @@ X_test_kbest = kbest.transform(X_test_pca)
 
 
 # The base learners provide predictions on the data, and the final estimator uses those predictions to make a final decision.
-
 
 # Define base learners (RandomForest, DecisionTree, MLP)
 base_learners = [
