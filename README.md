@@ -14,7 +14,7 @@ Trained with datasets like NSL-KDD and WSN-DS, it can detect a wide range of cyb
 
 # Results got so far 
 
-Till now we have a got around 98% accuracy with classifiers like ada boost , cat boost , boosting 
+Till now we have a got around 98% accuracy with classifiers like ada boost , cat boost , decision tree , random forest when used in hybrid mode.
 
 Below are some of the results that we got initially with simple classifiers like Random Forest and Decision Tree
 
